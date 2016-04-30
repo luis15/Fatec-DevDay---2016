@@ -50,6 +50,8 @@ class Denuncia {
 	@GeneratedValue
 	private Long id;
 	private String endereco;
+	private String data;
+	private String nome;
 
 	public String getEndereco() {
 		return endereco;
@@ -67,9 +69,27 @@ class Denuncia {
 		this.id = id;
 	}
 
+	public String getData() {
+		return data;
+	}
+
+	public void setData(String data) {
+		this.data = data;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
 	@Override
 	public String toString() {
 		return "Denuncia [endereco=" + endereco + "]";
+		return "Denuncia [data=" + data + "]";
+		return "Denuncia [nome=" + nome + "]";
 	}
 
 }
