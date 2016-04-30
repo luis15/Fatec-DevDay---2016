@@ -48,48 +48,169 @@ interface DenunciaRepositorio extends JpaRepository<Denuncia, Long>{
 class Denuncia {
 	@Id
 	@GeneratedValue
-	private Long id;
-	private String endereco;
+	private Long idDenuncia;
+	private String idCaso;
+	private String estado;
+	private String cidade;
+	private String bairro;
+	private String logradouro;
+	private String numero;
+	private String cep;
+	private String geoPosicao;
 	private String data;
+	private String totalDenuncia;
 	private String nome;
 
-	public String getEndereco() {
-		return endereco;
-	}
-
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
-	}
 	
-	public Long getId() {
-		return id;
+
+	public Long getIdDenuncia() {
+		return idDenuncia;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+
+
+	public void setIdDenuncia(Long idDenuncia) {
+		this.idDenuncia = idDenuncia;
 	}
+
+
+
+	public String getIdCaso() {
+		return idCaso;
+	}
+
+
+
+	public void setIdCaso(String idCaso) {
+		this.idCaso = idCaso;
+	}
+
+
+
+	public String getEstado() {
+		return estado;
+	}
+
+
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
+
+
+	public String getCidade() {
+		return cidade;
+	}
+
+
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
+
+
+	public String getBairro() {
+		return bairro;
+	}
+
+
+
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+
+
+
+	public String getLogradouro() {
+		return logradouro;
+	}
+
+
+
+	public void setLogradouro(String logradouro) {
+		this.logradouro = logradouro;
+	}
+
+
+
+	public String getNumero() {
+		return numero;
+	}
+
+
+
+	public void setNumero(String numero) {
+		this.numero = numero;
+	}
+
+
+
+	public String getCep() {
+		return cep;
+	}
+
+
+
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+
+
+
+	public String getGeoPosicao() {
+		return geoPosicao;
+	}
+
+
+
+	public void setGeoPosicao(String geoPosicao) {
+		this.geoPosicao = geoPosicao;
+	}
+
+
 
 	public String getData() {
 		return data;
 	}
 
+
+
 	public void setData(String data) {
 		this.data = data;
 	}
+
+
+
+	public String getTotalDenuncia() {
+		return totalDenuncia;
+	}
+
+
+
+	public void setTotalDenuncia(String totalDenuncia) {
+		this.totalDenuncia = totalDenuncia;
+	}
+
+
 
 	public String getNome() {
 		return nome;
 	}
 
+
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
 
+
+
 	@Override
 	public String toString() {
 		return "Denuncia [endereco=" + endereco + "]";
-		return "Denuncia [data=" + data + "]";
-		return "Denuncia [nome=" + nome + "]";
+		
 	}
 
 }
