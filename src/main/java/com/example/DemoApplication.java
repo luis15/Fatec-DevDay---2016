@@ -3,6 +3,7 @@ package com.example;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -30,7 +31,7 @@ class DenunciaControlador {
 	@Autowired // instancia a classe anonima (interface)
 	private DenunciaRepositorio repositorio;
 
-	@RequestMapping("/denuncias")
+	@RequestMapping(name = "/denuncias", method = RequestMethod.GET)
 	public List<Denuncia> buscaTodas() {
 		return repositorio.findAll();
 	}
@@ -56,11 +57,13 @@ interface DenunciaRepositorio extends JpaRepository<Denuncia, Long> {
 }
 
 @Entity
+
 class Denuncia implements Serializable {
 	@Id
 	@GeneratedValue
 	private Long idDenuncia;
 	private String idCaso;
+	@Column
 	private String estado;
 	private String cidade;
 	private String bairro;
